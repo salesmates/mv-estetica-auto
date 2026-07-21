@@ -4,36 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MV Estética Automotiva | Curitiba</title>
+  <title>MV Estética Automotiva | Proteção e Estética Premium</title>
   <meta
     name="description"
-    content="Estética automotiva premium em Curitiba. PPF, vitrificação, polimento, higienização e lavagem técnica."
+    content="MV Estética Automotiva: estética, proteção e cuidado premium para o seu veículo."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
   >
 
   <style>
     :root {
-      --black: #080909;
-      --dark: #101212;
-      --dark-2: #171919;
-      --line: rgba(255, 255, 255, 0.14);
-      --white: #f5f5f2;
-      --gray: #9b9d9b;
-      --yellow: #e0b51b;
-      --font-title: "Barlow Condensed", sans-serif;
-      --font-text: "DM Sans", sans-serif;
+      --black: #090909;
+      --dark: #111111;
+      --gray: #1d1d1d;
+      --light-gray: #a9a9a9;
+      --white: #ffffff;
+      --gold: #c9a76a;
+      --gold-light: #e1c28c;
+      --max-width: 1180px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -43,7 +42,7 @@
     body {
       background: var(--black);
       color: var(--white);
-      font-family: var(--font-text);
+      font-family: "Montserrat", Arial, sans-serif;
       overflow-x: hidden;
     }
 
@@ -58,605 +57,489 @@
     }
 
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
     }
 
-    /* CABEÇALHO */
-    .header {
-      height: 84px;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid var(--line);
-      background: rgba(8, 9, 9, 0.94);
-      position: sticky;
+    /* HEADER */
+
+    header {
+      position: absolute;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px);
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .header-content {
+    .nav {
+      min-height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
-      gap: 24px;
+      gap: 25px;
     }
 
     .brand-logo {
-      width: 185px;
+      width: 112px;
       height: auto;
-      object-fit: contain;
-      filter: brightness(0) invert(1);
     }
 
     .menu {
       display: flex;
       align-items: center;
       gap: 28px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.11em;
+      list-style: none;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #c4c4c1;
+    }
+
+    .menu a {
+      transition: color 0.2s ease;
     }
 
     .menu a:hover {
-      color: var(--yellow);
+      color: var(--gold);
     }
 
+    .nav-button,
     .button {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      gap: 10px;
-      min-height: 48px;
-      padding: 0 21px;
-      font-size: 0.73rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
+      justify-content: center;
+      padding: 15px 24px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #111111;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       transition: 0.25s ease;
     }
 
-    .button-light {
-      color: #090909;
-      background: var(--white);
-    }
-
-    .button-light:hover {
-      background: var(--yellow);
-      transform: translateY(-2px);
-    }
-
-    .button-outline {
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      color: var(--white);
-    }
-
-    .button-outline:hover {
-      border-color: var(--yellow);
-      color: var(--yellow);
+    .nav-button:hover,
+    .button:hover {
+      background: transparent;
+      color: var(--gold-light);
     }
 
     /* HERO */
-    .hero {
-      min-height: 690px;
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      isolation: isolate;
-      background:
-        linear-gradient(90deg, rgba(0, 0, 0, 0.89) 0%, rgba(0, 0, 0, 0.58) 46%, rgba(0, 0, 0, 0.12) 100%),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, transparent 52%),
-        url("assets/garagem-02.jpg") center center / cover no-repeat;
-    }
 
-    .hero::after {
-      content: "";
-      z-index: -1;
-      position: absolute;
-      width: 45%;
-      height: 4px;
-      left: 0;
-      bottom: 0;
-      background: var(--yellow);
+    .hero {
+      min-height: 780px;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.91) 0%, rgba(0, 0, 0, 0.63) 45%, rgba(0, 0, 0, 0.13) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.76) 0%, transparent 55%),
+        url("assets/garagem-01.jpg") center center / cover no-repeat;
     }
 
     .hero-content {
-      width: 100%;
-      padding: 110px 0 78px;
+      max-width: 700px;
     }
 
     .eyebrow {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
-      color: var(--yellow);
-      font-size: 0.72rem;
+      gap: 12px;
+      margin-bottom: 20px;
+      color: var(--gold-light);
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
-      display: block;
-      width: 25px;
-      height: 2px;
-      background: currentColor;
+      display: inline-block;
+      width: 42px;
+      height: 1px;
+      background: var(--gold);
     }
 
-    .hero h1,
-    .section-title {
-      font-family: var(--font-title);
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 0.87;
-      text-transform: uppercase;
+    h1,
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
     }
 
-    .hero h1 {
-      max-width: 690px;
-      font-size: clamp(4.4rem, 10vw, 8.6rem);
+    h1 {
+      max-width: 720px;
+      font-size: clamp(3rem, 6vw, 5.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
     }
 
-    .hero h1 span {
-      color: #828482;
+    h1 span {
+      color: var(--gold-light);
+      font-style: italic;
     }
 
-    .hero-text {
-      max-width: 510px;
-      margin: 28px 0 32px;
-      color: #e1e1dd;
+    .hero p {
+      max-width: 550px;
+      margin: 28px 0 35px;
+      color: #dedede;
       font-size: 1rem;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 15px;
     }
 
-    .rating {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-      color: #dbdbd7;
-      font-size: 0.78rem;
-      font-weight: 600;
+    .button-outline {
+      border-color: rgba(255, 255, 255, 0.55);
+      background: transparent;
+      color: var(--white);
     }
 
-    .stars {
-      color: var(--yellow);
-      font-size: 1rem;
-      letter-spacing: 2px;
+    .button-outline:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--black);
     }
 
-    /* INTRO */
-    .intro {
-      padding: 120px 0;
-      background: var(--dark);
+    /* SEÇÕES */
+
+    section {
+      padding: 105px 0;
     }
 
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.05fr;
-      gap: 80px;
-      align-items: end;
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 55px;
     }
 
-    .section-title {
-      font-size: clamp(3.6rem, 7vw, 6.5rem);
+    .section-heading h2 {
+      margin-top: 13px;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1.06;
+      letter-spacing: -0.035em;
     }
 
-    .section-title .muted {
-      color: #646664;
-    }
-
-    .intro-copy {
-      max-width: 490px;
-      color: #b9bbb8;
-      font-size: 1rem;
+    .section-heading p {
+      margin-top: 20px;
+      color: var(--light-gray);
       line-height: 1.8;
     }
 
-    .intro-copy strong {
-      color: var(--white);
-      font-weight: 600;
+    /* SOBRE */
+
+    .about {
+      background: #0d0d0d;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 500px;
+      background:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.08)),
+        url("assets/garagem-02.jpg") center / cover no-repeat;
+    }
+
+    .about-content h2 {
+      margin: 13px 0 24px;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      color: #bdbdbd;
+      line-height: 1.85;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      margin-top: 35px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold-light);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2.3rem;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 5px;
+      color: #aaa;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
     }
 
     /* SERVIÇOS */
+
     .services {
-      padding-bottom: 120px;
-      background: var(--dark);
+      background: var(--black);
     }
 
-    .service-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--line);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .service {
-      min-height: 325px;
-      padding: 28px 24px;
-      border-right: 1px solid var(--line);
+    .service-card {
+      min-height: 285px;
+      padding: 34px 30px;
       display: flex;
       flex-direction: column;
-      transition: 0.25s ease;
+      justify-content: end;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(145deg, #1b1b1b, #101010);
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
-    .service:last-child {
-      border-right: 0;
-    }
-
-    .service:hover {
-      background: #1d1f1f;
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
     }
 
     .service-number {
-      margin-left: auto;
-      font-family: var(--font-title);
-      color: #4c4e4c;
-      font-size: 2.7rem;
-      font-weight: 700;
-      line-height: 1;
+      margin-bottom: auto;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
     }
 
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 45px;
-      height: 45px;
-      margin-top: -32px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: var(--yellow);
-      font-size: 1.25rem;
+    .service-card h3 {
+      margin-bottom: 15px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.7rem;
     }
 
-    .service h3 {
-      margin-top: 35px;
-      font-family: var(--font-title);
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 0.95;
-      text-transform: uppercase;
-    }
-
-    .service p {
-      margin-top: 16px;
-      color: #a9aba8;
-      font-size: 0.84rem;
-      line-height: 1.75;
-    }
-
-    .service a {
-      width: fit-content;
-      margin-top: auto;
-      padding-top: 25px;
-      border-bottom: 1px solid var(--white);
-      font-size: 0.67rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .service a:hover {
-      color: var(--yellow);
-      border-color: var(--yellow);
-    }
-
-    /* GALERIA */
-    .gallery {
-      padding: 110px 0;
-      background: #090a0a;
-    }
-
-    .gallery-top {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 38px;
-    }
-
-    .gallery-top p {
-      max-width: 350px;
-      color: var(--gray);
+    .service-card p {
+      color: #ababab;
       font-size: 0.9rem;
       line-height: 1.7;
     }
 
+    /* GALERIA */
+
+    .gallery {
+      background: #0d0d0d;
+    }
+
     .gallery-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr 0.8fr;
-      grid-template-rows: 265px 265px;
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .gallery-item {
-      position: relative;
+      min-height: 330px;
       overflow: hidden;
-      background: #202121;
-    }
-
-    .gallery-item:first-child {
-      grid-row: span 2;
+      background: #171717;
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
+      min-height: 330px;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.45s ease;
     }
 
     .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.6));
-      pointer-events: none;
+      transform: scale(1.06);
     }
 
     /* CTA */
+
     .cta {
-      padding: 95px 0;
+      padding: 105px 0;
       background:
-        linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.47)),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.25) 100%),
         url("assets/ppf.jpg") center / cover no-repeat;
     }
 
+    .cta-content {
+      max-width: 720px;
+    }
+
     .cta h2 {
-      max-width: 710px;
-      font-family: var(--font-title);
-      font-size: clamp(3.8rem, 7vw, 6.8rem);
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 0.87;
-      text-transform: uppercase;
+      margin: 13px 0 23px;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
     }
 
     .cta p {
-      max-width: 500px;
-      margin: 24px 0 30px;
-      color: #deded9;
-      line-height: 1.7;
+      max-width: 560px;
+      margin-bottom: 33px;
+      color: #ddd;
+      line-height: 1.8;
     }
 
-    /* RODAPÉ */
-    .footer {
-      padding: 55px 0 26px;
-      background: #050505;
+    /* CONTATO */
+
+    .contact {
+      background: var(--black);
     }
 
-    .footer-top {
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 45px;
-      padding-bottom: 45px;
-      border-bottom: 1px solid var(--line);
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-box {
+      padding: 35px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #111111;
+    }
+
+    .contact-box h3 {
+      margin-bottom: 23px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.9rem;
+    }
+
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #c9c9c9;
+      line-height: 1.6;
+    }
+
+    .contact-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 42px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      background: #080808;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
     .footer-logo {
-      width: 200px;
-      filter: brightness(0) invert(1);
+      width: 95px;
+      height: auto;
     }
 
-    .footer-description {
-      max-width: 290px;
-      margin-top: 18px;
-      color: #898b88;
-      font-size: 0.82rem;
-      line-height: 1.7;
-    }
-
-    .footer h4 {
-      margin-bottom: 16px;
-      color: var(--yellow);
-      font-size: 0.68rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .footer p,
-    .footer a {
-      color: #b8bab6;
-      font-size: 0.83rem;
-      line-height: 1.9;
-    }
-
-    .footer a:hover {
-      color: var(--yellow);
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding-top: 25px;
-      color: #686a67;
-      font-size: 0.7rem;
-    }
-
-    /* BOTÃO FIXO */
-    .whatsapp-float {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 60;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 17px;
-      background: var(--yellow);
-      color: #0a0a0a;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .whatsapp-float:hover {
-      background: var(--white);
+    .footer-content p {
+      color: #8d8d8d;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      text-align: right;
     }
 
     /* RESPONSIVO */
+
     @media (max-width: 850px) {
       .menu {
         display: none;
       }
 
-      .header .button {
-        display: none;
-      }
-
-      .hero {
-        min-height: 650px;
-        background-position: 62% center;
-      }
-
-      .intro-grid {
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
       }
 
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .about-image {
+        min-height: 390px;
       }
 
-      .service:nth-child(2) {
-        border-right: 0;
-      }
-
-      .service:nth-child(-n+2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .gallery-grid {
+      .services-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 240px 240px;
-      }
-
-      .gallery-item:first-child {
-        grid-row: auto;
-        grid-column: span 2;
-      }
-
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-top > :first-child {
-        grid-column: span 2;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 560px) {
       .container {
-        width: min(100% - 30px, 1180px);
+        width: min(100% - 30px, var(--max-width));
       }
 
-      .header {
-        height: 70px;
+      .nav {
+        min-height: 75px;
       }
 
       .brand-logo {
-        width: 155px;
+        width: 90px;
+      }
+
+      .nav-button {
+        padding: 12px 14px;
+        font-size: 0.65rem;
       }
 
       .hero {
-        min-height: 640px;
-        background-position: 60% center;
+        min-height: 700px;
+        padding-top: 130px;
       }
 
-      .hero-content {
-        padding: 100px 0 50px;
-      }
-
-      .hero h1 {
-        font-size: 4.45rem;
-      }
-
-      .hero-text {
-        font-size: 0.92rem;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .intro,
-      .gallery {
-        padding: 75px 0;
-      }
-
-      .services {
-        padding-bottom: 75px;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service,
-      .service:nth-child(2) {
-        min-height: 285px;
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .service:last-child {
-        border-bottom: 0;
-      }
-
-      .gallery-top {
-        display: block;
-      }
-
-      .gallery-top p {
-        margin-top: 20px;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 250px);
-      }
-
-      .gallery-item:first-child {
-        grid-column: auto;
-      }
-
+      section,
       .cta {
         padding: 75px 0;
       }
 
-      .footer-top {
+      .services-grid,
+      .gallery-grid {
         grid-template-columns: 1fr;
       }
 
-      .footer-top > :first-child {
-        grid-column: auto;
+      .gallery-item,
+      .gallery-item img {
+        min-height: 260px;
       }
 
-      .footer-bottom {
+      .service-card {
+        min-height: 240px;
+      }
+
+      .footer-content {
         flex-direction: column;
+        align-items: flex-start;
       }
 
-      .whatsapp-float {
-        right: 15px;
-        bottom: 15px;
-        padding: 13px 15px;
+      .footer-content p {
+        text-align: left;
       }
     }
   </style>
@@ -664,189 +547,220 @@
 
 <body>
 
-  <header class="header">
-    <div class="container header-content">
-      <a href="#inicio" aria-label="MV Estética Automotiva">
-        <!-- Logo original: não alterar -->
-        <img class="brand-logo" src="assets/logo-mv.png" alt="MV Estética Automotiva">
+  <header>
+    <div class="container nav">
+      <a href="#inicio" aria-label="MV Estética Automotiva - Início">
+        <img
+          class="brand-logo"
+          src="assets/logo-mv.png"
+          alt="MV Estética Automotiva"
+        >
       </a>
 
-      <nav class="menu">
-        <a href="#servicos">Serviços</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#contato">Contato</a>
-      </nav>
+      <ul class="menu">
+        <li><a href="#sobre">A MV</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
 
       <a
-        class="button button-light"
-        href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento."
+        class="nav-button"
+        href="https://wa.me/5541999999999"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
-        Falar no WhatsApp →
+        Agendar
       </a>
     </div>
   </header>
 
   <main>
+
     <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <div class="eyebrow">Estética Automotiva · Curitiba</div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Estética automotiva premium</div>
 
-        <h1>
-          Excelência<br>
-          em cada <span>detalhe.</span>
-        </h1>
+          <h1>
+            O cuidado que o seu
+            <span>carro merece.</span>
+          </h1>
 
-        <p class="hero-text">
-          Cuidado profissional para deixar seu veículo impecável, protegido
-          e com acabamento de verdade.
-        </p>
+          <p>
+            Especialistas em proteção, estética e detalhamento automotivo.
+            Transformamos cada veículo com técnica, excelência e atenção aos
+            mínimos detalhes.
+          </p>
 
-        <div class="hero-actions">
-          <a
-            class="button button-light"
-            href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
-            target="_blank"
-            rel="noopener"
-          >
-            Solicitar orçamento →
-          </a>
+          <div class="hero-actions">
+            <a
+              class="button"
+              href="https://wa.me/5541999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp
+            </a>
 
-          <a class="button button-outline" href="#servicos">
-            Ver serviços
-          </a>
-        </div>
-
-        <div class="rating">
-          <span class="stars">★★★★★</span>
-          <span>4,9 no Google com base em avaliações de clientes.</span>
+            <a class="button button-outline" href="#servicos">
+              Conheça os serviços
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="intro">
-      <div class="container intro-grid">
-        <div>
-          <div class="eyebrow">O que a MV faz</div>
-          <h2 class="section-title">
-            Seu carro.<br>
-            <span class="muted">Outro nível.</span>
-          </h2>
-        </div>
+    <section class="about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-image"></div>
 
-        <p class="intro-copy">
-          Da lavagem técnica à proteção da pintura, cada serviço é realizado
-          com <strong>atenção máxima aos detalhes</strong>, produtos de qualidade
-          e o padrão que o seu veículo merece.
-        </p>
+        <div class="about-content">
+          <div class="eyebrow">Sobre a MV</div>
+
+          <h2>Excelência em cada detalhe do seu veículo.</h2>
+
+          <p>
+            Na MV Estética Automotiva, combinamos produtos de alta performance,
+            equipamentos profissionais e mão de obra especializada para entregar
+            resultados impecáveis.
+          </p>
+
+          <p>
+            Mais do que deixar seu carro bonito, nosso objetivo é proteger,
+            valorizar e preservar o seu patrimônio.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Premium</strong>
+              <span>Atendimento</span>
+            </div>
+
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Dedicação</span>
+            </div>
+
+            <div class="stat">
+              <strong>MV</strong>
+              <span>Qualidade</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="services" id="servicos">
       <div class="container">
-        <div class="service-grid">
+        <div class="section-heading">
+          <div class="eyebrow">Nossos serviços</div>
 
-          <article class="service">
-            <div class="service-number">01</div>
-            <div class="service-icon">✦</div>
-            <h3>Lavagem<br>Técnica</h3>
+          <h2>Soluções completas para o seu automóvel.</h2>
+
+          <p>
+            Tratamentos profissionais para quem busca estética, proteção e
+            conservação de alto padrão.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Polimento Técnico</h3>
             <p>
-              Limpeza detalhada interna e externa, respeitando cada superfície do seu veículo.
+              Correção de imperfeições e renovação do brilho da pintura com
+              acabamento de alto nível.
             </p>
-            <a
-              href="https://wa.me/5541995713588?text=Olá!%20Tenho%20interesse%20em%20lavagem%20técnica."
-              target="_blank"
-              rel="noopener"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
-          <article class="service">
-            <div class="service-number">02</div>
-            <div class="service-icon">◇</div>
-            <h3>Higienização<br>Interna</h3>
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Vitrificação</h3>
             <p>
-              Cuidado profundo para bancos, tapetes, painéis e todos os detalhes do interior.
+              Proteção duradoura para a pintura, mais brilho e facilidade para
+              manter seu veículo sempre impecável.
             </p>
-            <a
-              href="https://wa.me/5541995713588?text=Olá!%20Tenho%20interesse%20em%20higienização%20interna."
-              target="_blank"
-              rel="noopener"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
-          <article class="service">
-            <div class="service-number">03</div>
-            <div class="service-icon">◉</div>
-            <h3>Polimento e<br>Vitrificação</h3>
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>PPF Automotivo</h3>
             <p>
-              Brilho, correção e proteção para valorizar a pintura e conservar seu veículo.
+              Película de proteção para preservar a pintura contra riscos,
+              impactos leves e agressões do dia a dia.
             </p>
-            <a
-              href="https://wa.me/5541995713588?text=Olá!%20Tenho%20interesse%20em%20polimento%20ou%20vitrificação."
-              target="_blank"
-              rel="noopener"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
-          <article class="service">
-            <div class="service-number">04</div>
-            <div class="service-icon">◌</div>
-            <h3>PPF e<br>Proteção</h3>
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>Higienização Interna</h3>
             <p>
-              Película de proteção para preservar a pintura contra riscos, impactos e desgaste.
+              Limpeza detalhada, cuidado com cada superfície e um interior mais
+              limpo, renovado e confortável.
             </p>
-            <a
-              href="https://wa.me/5541995713588?text=Olá!%20Tenho%20interesse%20em%20PPF."
-              target="_blank"
-              rel="noopener"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>Lavagem Detalhada</h3>
+            <p>
+              Processo cuidadoso para limpeza completa do veículo, valorizando
+              cada detalhe externo e interno.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Consultoria</h3>
+            <p>
+              Avaliamos o estado do seu carro e indicamos o melhor tratamento
+              para suas necessidades.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="gallery" id="resultados">
+    <section class="gallery" id="galeria">
       <div class="container">
-        <div class="gallery-top">
-          <div>
-            <div class="eyebrow">Estrutura e resultado</div>
-            <h2 class="section-title">
-              Feito para<br>
-              <span class="muted">impressionar.</span>
-            </h2>
-          </div>
+        <div class="section-heading">
+          <div class="eyebrow">Nossa estrutura</div>
+
+          <h2>Um espaço feito para cuidar do seu carro.</h2>
 
           <p>
-            Um espaço preparado para cuidar do seu veículo com técnica,
-            precisão e acabamento premium.
+            Conheça um pouco da MV Estética Automotiva e do nosso trabalho.
           </p>
         </div>
 
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="assets/garagem-01.jpg" alt="Espaço da MV Estética Automotiva">
+            <img
+              src="assets/garagem-01.jpg"
+              alt="Carro no espaço da MV Estética Automotiva"
+            >
           </div>
 
           <div class="gallery-item">
-            <img src="assets/garagem-03.jpg" alt="Veículo em atendimento na MV Estética Automotiva">
+            <img
+              src="assets/garagem-02.jpg"
+              alt="Fachada ou espaço interno da MV Estética Automotiva"
+            >
           </div>
 
           <div class="gallery-item">
-            <img src="assets/ppf.jpg" alt="Aplicação de PPF automotivo">
+            <img
+              src="assets/garagem-03.jpg"
+              alt="Estrutura da MV Estética Automotiva"
+            >
           </div>
 
           <div class="gallery-item">
-            <img src="assets/garagem-02.jpg" alt="Carros no espaço da MV Estética Automotiva">
+            <img
+              src="assets/ppf.jpg"
+              alt="Aplicação de PPF automotivo"
+            >
           </div>
         </div>
       </div>
@@ -854,83 +768,114 @@
 
     <section class="cta">
       <div class="container">
-        <div class="eyebrow">Agende seu atendimento</div>
+        <div class="cta-content">
+          <div class="eyebrow">Seu carro em outro nível</div>
 
-        <h2>
-          Seu veículo merece<br>
-          esse cuidado.
-        </h2>
+          <h2>Proteção, brilho e cuidado profissional.</h2>
 
-        <p>
-          Fale com a nossa equipe, tire suas dúvidas e solicite seu orçamento pelo WhatsApp.
-        </p>
+          <p>
+            Solicite seu orçamento e descubra o tratamento ideal para deixar seu
+            veículo protegido e impecável.
+          </p>
 
-        <a
-          class="button button-light"
-          href="https://wa.me/5541995713588?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20atendimento."
-          target="_blank"
-          rel="noopener"
-        >
-          Agendar no WhatsApp →
-        </a>
+          <a
+            class="button"
+            href="https://wa.me/5541999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Solicitar orçamento
+          </a>
+        </div>
       </div>
     </section>
+
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Contato</div>
+
+          <h2>Vamos cuidar do seu veículo?</h2>
+
+          <p>
+            Entre em contato, tire suas dúvidas e agende seu atendimento.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Fale com a MV</h3>
+
+            <ul class="contact-list">
+              <li>
+                <strong>WhatsApp</strong>
+                <a
+                  href="https://wa.me/5541999999999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Clique aqui para conversar
+                </a>
+              </li>
+
+              <li>
+                <strong>Instagram</strong>
+                <a
+                  href="https://instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @mvesteticaautomotiva
+                </a>
+              </li>
+
+              <li>
+                <strong>Localização</strong>
+                Curitiba - PR
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-box">
+            <h3>Horário de atendimento</h3>
+
+            <ul class="contact-list">
+              <li>
+                <strong>Segunda a sexta</strong>
+                Das 08h às 18h
+              </li>
+
+              <li>
+                <strong>Sábado</strong>
+                Das 08h às 13h
+              </li>
+
+              <li>
+                <strong>Domingo</strong>
+                Fechado
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer" id="contato">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <!-- Logo original: não alterar -->
-          <img class="footer-logo" src="assets/logo-mv.png" alt="MV Estética Automotiva">
+  <footer>
+    <div class="container footer-content">
+      <img
+        class="footer-logo"
+        src="assets/logo-mv.png"
+        alt="MV Estética Automotiva"
+      >
 
-          <p class="footer-description">
-            Estética automotiva com excelência, técnica e cuidado em cada entrega.
-          </p>
-        </div>
-
-        <div>
-          <h4>Contato</h4>
-          <p>
-            <a href="tel:+5541995713588">(41) 99571-3588</a><br>
-            <a href="https://www.instagram.com/mvesteticauto/" target="_blank" rel="noopener">
-              @mvesteticauto
-            </a>
-          </p>
-        </div>
-
-        <div>
-          <h4>Localização</h4>
-          <p>
-            Rua Amazonas, 651<br>
-            Água Verde · Curitiba, PR<br>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Rua+Amazonas,+651,+Agua+Verde,+Curitiba,+PR"
-              target="_blank"
-              rel="noopener"
-            >
-              Ver no mapa →
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 MV Estética Automotiva. Todos os direitos reservados.</span>
-        <span>Curitiba e Região.</span>
-      </div>
+      <p>
+        © 2026 MV Estética Automotiva.<br>
+        Todos os direitos reservados.
+      </p>
     </div>
   </footer>
-
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20um%20orçamento."
-    target="_blank"
-    rel="noopener"
-    aria-label="Falar no WhatsApp"
-  >
-    WhatsApp ↗
-  </a>
 
 </body>
 </html>
