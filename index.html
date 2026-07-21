@@ -4,35 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MV Estética Automotiva | Curitiba e Região</title>
+  <title>MV Estética Automotiva | Curitiba - PR</title>
 
   <meta
     name="description"
-    content="MV Estética Automotiva em Curitiba. Lavagem técnica, polimento, vitrificação, higienização, PPF e cuidados completos para seu veículo."
+    content="MV Estética Automotiva em Curitiba: lavagem técnica, polimento, vitrificação, PPF, higienização e cuidados premium para seu veículo."
   />
 
-  <meta name="theme-color" content="#0b0d0f" />
+  <meta name="theme-color" content="#ffffff" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
     rel="stylesheet"
   />
 
   <style>
     :root {
-      --black: #090a0b;
-      --black-soft: #101214;
-      --black-card: #17191c;
-      --white: #f8f8f6;
-      --gray-100: #dedfdf;
-      --gray-300: #a5a8aa;
-      --gray-500: #777b7e;
-      --line: rgba(255, 255, 255, 0.12);
-      --line-soft: rgba(255, 255, 255, 0.08);
-      --green: #25d366;
-      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      --white: #ffffff;
+      --black: #101010;
+      --dark: #181818;
+      --gray: #686868;
+      --light: #f4f4f2;
+      --line: #ddddda;
+      --yellow: #f3c400;
+      --yellow-dark: #d8a900;
+      --whatsapp: #25d366;
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
     }
 
     * {
@@ -46,8 +45,8 @@
     }
 
     body {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
       font-family: "DM Sans", Arial, sans-serif;
       overflow-x: hidden;
     }
@@ -57,14 +56,8 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
     button {
-      cursor: pointer;
+      font: inherit;
     }
 
     .container {
@@ -73,146 +66,128 @@
     }
 
     .section {
-      padding: 88px 0;
+      padding: 90px 0;
     }
 
     .eyebrow {
       display: flex;
       align-items: center;
-      gap: 9px;
-      color: var(--gray-300);
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #565656;
       font-size: 0.71rem;
-      font-weight: 700;
-      letter-spacing: 0.13em;
+      font-weight: 800;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 14px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 7px;
-      height: 7px;
-      border: 2px solid currentColor;
-      border-radius: 50%;
+      width: 28px;
+      height: 3px;
+      background: var(--yellow);
     }
 
     .section-title {
-      max-width: 720px;
-      font-family: "Oswald", sans-serif;
-      font-size: clamp(2.8rem, 5vw, 4.5rem);
-      font-weight: 600;
-      letter-spacing: -0.035em;
-      line-height: 1;
-      text-transform: uppercase;
+      max-width: 760px;
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(2.15rem, 4.5vw, 4.25rem);
+      font-weight: 900;
+      letter-spacing: -0.065em;
+      line-height: 0.98;
     }
 
     .section-title span {
-      color: var(--gray-500);
+      color: #8b8b8b;
     }
 
     .section-text {
-      max-width: 590px;
-      color: var(--gray-300);
+      max-width: 560px;
+      margin-top: 18px;
+      color: var(--gray);
       font-size: 0.96rem;
       line-height: 1.75;
-      margin-top: 18px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      min-height: 50px;
-      padding: 0 22px;
-      border: 1px solid transparent;
-      font-size: 0.76rem;
+      min-height: 52px;
+      padding: 0 23px;
+      border: 0;
+      border-radius: 8px;
+      font-size: 0.75rem;
       font-weight: 800;
-      letter-spacing: 0.035em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       transition: 0.25s ease;
     }
 
-    .btn-primary {
-      background: var(--white);
-      color: #111;
-    }
-
-    .btn-primary:hover {
-      background: #dcdcdc;
+    .btn:hover {
       transform: translateY(-3px);
     }
 
-    .btn-outline {
-      border-color: rgba(255, 255, 255, 0.45);
+    .btn-dark {
+      background: var(--black);
       color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: #333333;
+    }
+
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    .btn-yellow:hover {
+      background: var(--yellow-dark);
+    }
+
+    .btn-outline {
+      border: 1px solid #bcbcbc;
       background: transparent;
+      color: var(--black);
     }
 
     .btn-outline:hover {
-      background: var(--white);
-      color: #101010;
-      border-color: var(--white);
+      border-color: var(--black);
+      background: var(--black);
+      color: var(--white);
     }
 
     /* HEADER */
     .header {
       position: fixed;
-      z-index: 100;
       top: 0;
+      right: 0;
       left: 0;
-      width: 100%;
+      z-index: 50;
       border-bottom: 1px solid transparent;
       transition: 0.25s ease;
     }
 
     .header.scrolled {
-      background: rgba(9, 10, 11, 0.94);
-      border-color: var(--line-soft);
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
     }
 
     .nav {
-      height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      min-height: 78px;
     }
 
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      color: #fff;
-      line-height: 0.8;
-      text-transform: uppercase;
-    }
-
-    .logo-mv {
-      font-family: "Oswald", sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      font-style: italic;
-      letter-spacing: -0.13em;
-      margin-right: 10px;
-    }
-
-    .logo-name {
-      display: flex;
-      flex-direction: column;
-      font-family: "Oswald", sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-
-    .logo-name small {
-      color: var(--gray-300);
-      font-family: "DM Sans", sans-serif;
-      font-size: 0.48rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      margin-top: 6px;
+    .logo img {
+      display: block;
+      width: 210px;
+      max-height: 48px;
+      object-fit: contain;
+      object-position: left center;
     }
 
     .menu {
@@ -223,100 +198,101 @@
     }
 
     .menu a {
-      color: var(--gray-300);
+      color: #4d4d4d;
       font-size: 0.71rem;
-      font-weight: 700;
-      letter-spacing: 0.075em;
+      font-weight: 800;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      transition: color 0.2s ease;
+      transition: 0.2s;
     }
 
     .menu a:hover {
-      color: #fff;
+      color: var(--black);
     }
 
     .nav-button {
-      min-height: 42px;
-      padding: 0 17px;
-      font-size: 0.68rem;
+      padding: 13px 18px;
+      border-radius: 7px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .menu-toggle {
       display: none;
       border: 0;
       background: transparent;
-      color: #fff;
-      font-size: 1.65rem;
+      color: var(--black);
+      font-size: 1.8rem;
+      cursor: pointer;
     }
 
     /* HERO */
     .hero {
-      min-height: 650px;
+      position: relative;
       display: flex;
       align-items: center;
-      position: relative;
+      min-height: 730px;
+      padding: 125px 0 65px;
       overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(9, 10, 11, 0.98) 0%, rgba(9, 10, 11, 0.82) 48%, rgba(9, 10, 11, 0.3) 100%),
-        url("https://images.unsplash.com/photo-1607860108855-64acf2078ed0?auto=format&fit=crop&w=2000&q=90")
-        center / cover;
+      background: #e9e9e7;
     }
 
-    .hero::after {
+    .hero::before {
       content: "";
       position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(0deg, var(--black) 0%, transparent 27%);
+      top: 0;
+      right: 0;
+      width: 52%;
+      height: 100%;
+      background:
+        linear-gradient(90deg, #e9e9e7 0%, rgba(233, 233, 231, 0.1) 28%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.26), transparent 48%),
+        url("imagens/mv-fachada-1.jpg") center / cover;
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      padding-top: 76px;
-      max-width: 720px;
+      max-width: 700px;
     }
 
-    .hero-label {
+    .hero-tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 50px;
-      color: var(--gray-100);
-      font-size: 0.69rem;
-      font-weight: 700;
       margin-bottom: 22px;
-    }
-
-    .hero-label::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 12px var(--green);
-    }
-
-    .hero h1 {
-      font-family: "Oswald", sans-serif;
-      font-size: clamp(3.7rem, 8vw, 7.1rem);
-      font-weight: 600;
-      letter-spacing: -0.045em;
-      line-height: 0.93;
+      padding: 9px 12px;
+      border-radius: 5px;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
     }
 
+    .hero h1 {
+      max-width: 720px;
+      font-family: "Montserrat", sans-serif;
+      font-size: clamp(3.2rem, 7.4vw, 6.8rem);
+      font-weight: 900;
+      letter-spacing: -0.085em;
+      line-height: 0.87;
+    }
+
     .hero h1 span {
-      color: #aeb1b4;
+      color: #777777;
     }
 
     .hero p {
-      max-width: 510px;
-      margin: 22px 0 28px;
-      color: var(--gray-100);
-      font-size: 0.98rem;
+      max-width: 540px;
+      margin: 25px 0 29px;
+      color: #505050;
+      font-size: 1rem;
       line-height: 1.75;
     }
 
@@ -326,518 +302,361 @@
       gap: 12px;
     }
 
-    .hero-proof {
-      position: absolute;
-      z-index: 2;
-      left: 50%;
-      bottom: 28px;
-      width: min(1180px, calc(100% - 40px));
+    .hero-info {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      transform: translateX(-50%);
-      color: var(--gray-100);
-      font-size: 0.78rem;
+      gap: 32px;
+      margin-top: 42px;
     }
 
-    .hero-stars {
-      color: #fff;
-      font-size: 1rem;
-      letter-spacing: 2px;
+    .hero-info div {
+      display: grid;
+      gap: 3px;
     }
 
-    .hero-proof strong {
-      color: #fff;
+    .hero-info strong {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .hero-info span {
+      color: #656565;
+      font-size: 0.72rem;
+      font-weight: 700;
     }
 
     /* SERVIÇOS */
     .services {
-      background: var(--black-soft);
+      background: var(--black);
+      color: var(--white);
     }
 
-    .section-top {
+    .services .eyebrow {
+      color: #cfcfcf;
+    }
+
+    .services .section-title span {
+      color: var(--yellow);
+    }
+
+    .services-top {
       display: flex;
       align-items: end;
       justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 36px;
+      gap: 35px;
+      margin-bottom: 44px;
     }
 
-    .section-top .section-text {
-      margin: 0;
-    }
-
-    .service-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .service-tab {
-      padding: 11px 16px;
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--gray-300);
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      transition: 0.2s ease;
-    }
-
-    .service-tab:hover,
-    .service-tab.active {
-      background: var(--white);
-      color: #101010;
-      border-color: var(--white);
-    }
-
-    .tab-panel {
-      display: none;
-    }
-
-    .tab-panel.active {
-      display: grid;
+    .services-top p {
+      max-width: 430px;
+      color: #b5b5b5;
+      font-size: 0.92rem;
+      line-height: 1.75;
     }
 
     .services-grid {
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid #373737;
+      background: #373737;
     }
 
     .service-card {
-      min-height: 280px;
-      padding: 26px;
-      border-right: 1px solid var(--line);
-      background: #17191b;
-      transition: background 0.25s ease;
-    }
-
-    .service-card:last-child {
-      border-right: 0;
+      min-height: 230px;
+      padding: 28px;
+      background: #181818;
+      transition: 0.25s ease;
     }
 
     .service-card:hover {
-      background: #202326;
-    }
-
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 45px;
-      height: 45px;
-      margin-bottom: 42px;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      color: #fff;
-      font-size: 1.25rem;
+      background: #242424;
     }
 
     .service-number {
-      float: right;
-      color: rgba(255, 255, 255, 0.14);
-      font-family: "Oswald", sans-serif;
-      font-size: 2.7rem;
-      font-weight: 600;
-      line-height: 1;
+      display: block;
+      margin-bottom: 28px;
+      color: var(--yellow);
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
     }
 
     .service-card h3 {
-      margin-bottom: 13px;
-      font-family: "Oswald", sans-serif;
-      font-size: 1.65rem;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      line-height: 1;
-      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
     }
 
     .service-card p {
-      color: var(--gray-300);
+      color: #ababab;
       font-size: 0.8rem;
       line-height: 1.7;
     }
 
-    .service-link {
-      display: inline-block;
-      margin-top: 19px;
-      color: #fff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
-      font-size: 0.67rem;
-      font-weight: 800;
-      letter-spacing: 0.07em;
-      padding-bottom: 4px;
-      text-transform: uppercase;
+    /* GALERIA */
+    .results {
+      background: var(--light);
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .result-main,
+    .result-small {
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .result-main {
+      min-height: 450px;
+    }
+
+    .result-side {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .result-small {
+      min-height: 210px;
+    }
+
+    .results img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .results img:hover {
+      transform: scale(1.04);
     }
 
     /* AVALIAÇÕES */
     .reviews {
-      background: #f7f7f5;
-      color: #101112;
-    }
-
-    .reviews .eyebrow,
-    .reviews .section-text {
-      color: #676b6e;
-    }
-
-    .reviews .section-title span {
-      color: #7d8184;
-    }
-
-    .reviews-layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 42px;
-      align-items: center;
-      margin-top: 42px;
-    }
-
-    .google-score {
       text-align: center;
-      padding: 27px 15px;
-      border-right: 1px solid #d5d5d2;
     }
 
-    .google-score small {
-      display: block;
-      color: #5f6368;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .reviews .eyebrow {
+      justify-content: center;
     }
 
-    .score-number {
-      margin: 7px 0;
-      font-size: 4rem;
+    .reviews .section-title {
+      margin: 0 auto;
+    }
+
+    .google-summary {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 45px;
+      align-items: center;
+      max-width: 980px;
+      margin: 48px auto 0;
+      padding: 36px;
+      border: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .rating-box {
+      padding-right: 42px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .google-label {
+      margin-bottom: 7px;
+      color: #4285f4;
+      font-size: 1.15rem;
       font-weight: 800;
-      letter-spacing: -0.07em;
+    }
+
+    .rating-number {
+      font-family: "Montserrat", sans-serif;
+      font-size: 4.7rem;
+      font-weight: 900;
+      letter-spacing: -0.1em;
       line-height: 1;
     }
 
-    .score-stars {
+    .stars {
+      margin: 9px 0;
       color: #fbbc04;
-      font-size: 1.65rem;
-      letter-spacing: 2px;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
     }
 
-    .google-score p {
-      margin-top: 10px;
-      color: #45484a;
+    .rating-box p {
+      color: var(--gray);
       font-size: 0.8rem;
     }
 
-    .google-name {
-      margin-top: 16px;
-      color: #4285f4;
-      font-size: 1.55rem;
-      font-weight: 700;
-      letter-spacing: -0.06em;
-    }
-
-    .google-name span:nth-child(2) {
-      color: #ea4335;
-    }
-
-    .google-name span:nth-child(3) {
-      color: #fbbc05;
-    }
-
-    .google-name span:nth-child(4) {
-      color: #4285f4;
-    }
-
-    .google-name span:nth-child(5) {
-      color: #34a853;
-    }
-
-    .google-name span:nth-child(6) {
-      color: #ea4335;
-    }
-
-    .reviews-cards {
+    .reviews-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 17px;
     }
 
-    .review-card {
-      min-height: 215px;
-      padding: 21px;
-      border-radius: 12px;
-      background: #ececeb;
+    .review {
+      position: relative;
+      padding-left: 20px;
+      border-left: 4px solid var(--yellow);
     }
 
-    .review-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 14px;
+    .review p {
+      color: #333;
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.65;
     }
 
-    .review-person {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .review-avatar {
-      display: grid;
-      place-items: center;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background: #24272a;
-      color: white;
+    .review strong {
+      display: block;
+      margin-top: 8px;
+      color: #777;
       font-size: 0.72rem;
-      font-weight: 800;
+      font-style: normal;
     }
 
-    .review-person strong {
-      display: block;
-      font-size: 0.78rem;
+    .google-button {
+      margin-top: 32px;
     }
 
-    .review-person small {
-      color: #777b7e;
-      font-size: 0.66rem;
-    }
-
-    .review-google {
-      color: #4285f4;
-      font-size: 1.2rem;
-      font-weight: 800;
-    }
-
-    .review-stars {
-      color: #fbbc04;
-      font-size: 0.96rem;
-      letter-spacing: 1px;
-      margin-bottom: 11px;
-    }
-
-    .review-card p {
-      color: #323537;
-      font-size: 0.79rem;
-      line-height: 1.65;
-    }
-
-    .review-action {
-      display: flex;
-      justify-content: center;
-      margin-top: 34px;
-    }
-
-    .review-action .btn {
-      background: #17191b;
-      color: #fff;
-    }
-
-    .review-action .btn:hover {
-      background: #33373a;
-    }
-
-    /* DIFERENCIAIS */
-    .benefits {
-      padding: 68px 0;
+    /* CONTATO */
+    .contact {
       background: var(--black);
-      border-bottom: 1px solid var(--line-soft);
+      color: var(--white);
     }
 
-    .benefits-grid {
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--line);
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .benefit {
-      padding: 24px;
-      border-right: 1px solid var(--line);
+    .contact .eyebrow {
+      color: #c9c9c9;
     }
 
-    .benefit:last-child {
-      border-right: 0;
+    .contact .section-title span {
+      color: var(--yellow);
     }
 
-    .benefit strong {
+    .contact-text {
+      margin-top: 19px;
+      color: #b7b7b7;
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #ffffff;
+      font-size: 0.85rem;
+    }
+
+    .contact-icon {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--black);
+      font-weight: 900;
+    }
+
+    .map {
+      min-height: 420px;
+      overflow: hidden;
+      border: 0;
+      background: #242424;
+    }
+
+    .map iframe {
       display: block;
-      margin-bottom: 8px;
-      font-family: "Oswald", sans-serif;
-      font-size: 1.28rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
-    }
-
-    .benefit p {
-      color: var(--gray-300);
-      font-size: 0.76rem;
-      line-height: 1.65;
+      width: 100%;
+      height: 420px;
+      border: 0;
+      filter: grayscale(1) contrast(1.05);
     }
 
     /* FOOTER */
     .footer {
-      padding: 62px 0 24px;
-      background: #080909;
+      padding: 22px 0;
+      background: #090909;
+      color: #a0a0a0;
     }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.8fr 1fr 1.25fr;
-      gap: 38px;
-      padding-bottom: 42px;
-    }
-
-    .footer-brand p {
-      max-width: 260px;
-      margin-top: 20px;
-      color: var(--gray-500);
-      font-size: 0.78rem;
-      line-height: 1.7;
-    }
-
-    .footer h3 {
-      margin-bottom: 18px;
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .footer-links {
-      display: grid;
-      gap: 11px;
-      list-style: none;
-    }
-
-    .footer-links a,
-    .footer-contact a,
-    .footer-contact p {
-      color: var(--gray-300);
-      font-size: 0.78rem;
-      line-height: 1.55;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover,
-    .footer-contact a:hover {
-      color: #fff;
-    }
-
-    .footer-contact {
-      display: grid;
-      gap: 14px;
-    }
-
-    .footer-contact strong {
-      display: block;
-      margin-bottom: 3px;
-      color: #fff;
-      font-size: 0.69rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .footer-map {
-      min-height: 190px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: #16181a;
-    }
-
-    .footer-map iframe {
-      display: block;
-      width: 100%;
-      height: 190px;
-      border: 0;
-      filter: grayscale(1) invert(0.9) contrast(0.9);
-    }
-
-    .footer-bottom {
+    .footer-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line-soft);
     }
 
-    .footer-bottom p,
-    .footer-bottom a {
-      color: var(--gray-500);
-      font-size: 0.68rem;
+    .footer p,
+    .footer a {
+      font-size: 0.7rem;
+    }
+
+    .footer a {
+      color: var(--yellow);
+      font-weight: 700;
     }
 
     /* WHATSAPP */
-    .whatsapp-float {
+    .whatsapp {
       position: fixed;
-      z-index: 90;
       right: 22px;
       bottom: 22px;
+      z-index: 40;
       display: grid;
+      width: 58px;
+      height: 58px;
       place-items: center;
-      width: 56px;
-      height: 56px;
       border-radius: 50%;
-      background: var(--green);
-      color: #fff;
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.32);
-      font-size: 1.55rem;
-      transition: transform 0.2s ease;
+      background: var(--whatsapp);
+      color: white;
+      box-shadow: 0 13px 28px rgba(37, 211, 102, 0.36);
+      font-size: 1.35rem;
+      font-weight: 900;
+      transition: 0.25s ease;
     }
 
-    .whatsapp-float:hover {
+    .whatsapp:hover {
       transform: scale(1.08);
     }
 
-    /* MOBILE */
-    @media (max-width: 960px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .service-card:nth-child(2) {
-        border-right: 0;
-      }
-
-      .service-card:nth-child(-n + 2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .reviews-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .google-score {
-        border-right: 0;
-        border-bottom: 1px solid #d5d5d2;
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 740px) {
-      .menu-toggle {
-        display: block;
-      }
-
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
       .menu {
         position: absolute;
-        top: 76px;
+        top: 78px;
+        right: 0;
         left: 0;
-        width: 100%;
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 0;
-        padding: 12px 20px 20px;
+        padding: 10px 20px;
         border-bottom: 1px solid var(--line);
-        background: #101214;
+        background: white;
       }
 
       .menu.active {
@@ -845,8 +664,7 @@
       }
 
       .menu li {
-        width: 100%;
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom: 1px solid #eeeeee;
       }
 
       .menu a {
@@ -854,101 +672,119 @@
         padding: 15px 0;
       }
 
+      .menu-toggle {
+        display: block;
+      }
+
       .nav-button {
         display: none;
       }
 
-      .section-top {
-        display: block;
+      .hero::before {
+        width: 100%;
+        opacity: 0.28;
       }
 
-      .section-top .section-text {
-        margin-top: 18px;
+      .hero-content {
+        max-width: 620px;
       }
 
-      .reviews-cards {
-        grid-template-columns: 1fr;
-      }
-
-      .benefits-grid {
+      .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .benefit:nth-child(2) {
-        border-right: 0;
+      .contact-grid,
+      .google-summary {
+        grid-template-columns: 1fr;
       }
 
-      .benefit:nth-child(-n + 2) {
+      .rating-box {
+        padding: 0 0 28px;
+        border-right: 0;
         border-bottom: 1px solid var(--line);
       }
     }
 
-    @media (max-width: 540px) {
+    @media (max-width: 620px) {
       .container {
-        width: min(100% - 30px, 1180px);
+        width: min(100% - 32px, 1180px);
       }
 
       .section {
         padding: 65px 0;
       }
 
+      .logo img {
+        width: 175px;
+      }
+
       .hero {
-        min-height: 650px;
-        background-position: 62% center;
+        min-height: 660px;
+        padding-top: 115px;
       }
 
       .hero h1 {
-        font-size: clamp(3.55rem, 18vw, 5rem);
+        font-size: clamp(3.1rem, 16vw, 4.8rem);
       }
 
       .hero-actions .btn {
         width: 100%;
       }
 
-      .hero-proof {
-        display: none;
+      .hero-info {
+        gap: 19px;
+      }
+
+      .hero-info strong {
+        font-size: 1.1rem;
+      }
+
+      .services-top {
+        display: block;
+      }
+
+      .services-top p {
+        margin-top: 18px;
       }
 
       .services-grid {
         grid-template-columns: 1fr;
       }
 
-      .service-card,
-      .service-card:nth-child(2) {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
+      .service-card {
+        min-height: auto;
       }
 
-      .service-card:last-child {
-        border-bottom: 0;
-      }
-
-      .service-icon {
-        margin-bottom: 30px;
-      }
-
-      .footer-grid {
+      .results-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
       }
 
-      .footer-bottom {
+      .result-main {
+        min-height: 300px;
+      }
+
+      .result-side {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+
+      .result-small {
+        min-height: 155px;
+      }
+
+      .google-summary {
+        padding: 25px;
+      }
+
+      .map,
+      .map iframe {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      .footer-content {
         flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .benefits-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .benefit,
-      .benefit:nth-child(2) {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .benefit:last-child {
-        border-bottom: 0;
+        text-align: center;
       }
     }
   </style>
@@ -957,12 +793,8 @@
 <body>
   <header class="header" id="inicio">
     <div class="container nav">
-      <a href="#inicio" class="logo" aria-label="MV Estética Automotiva - início">
-        <span class="logo-mv">MV</span>
-        <span class="logo-name">
-          Estética Automotiva
-          <small>Curitiba e Região</small>
-        </span>
+      <a href="#inicio" class="logo" aria-label="MV Estética Automotiva">
+        <img src="imagens/logo-mv.png" alt="MV Estética Automotiva" />
       </a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -971,407 +803,237 @@
 
       <ul class="menu" id="menu">
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#resultados">Resultados</a></li>
         <li><a href="#avaliacoes">Avaliações</a></li>
-        <li><a href="#produtos">Produtos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
 
       <a
-        class="btn btn-primary nav-button"
-        href="https://wa.me/5541995713588?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
+        class="nav-button"
+        href="https://wa.me/5541995713588?text=Olá!%20Vim%20pelo%20site%20da%20MV%20Estética%20Automotiva%20e%20gostaria%20de%20um%20orçamento."
         target="_blank"
         rel="noopener noreferrer"
       >
-        Falar no WhatsApp
+        Solicitar orçamento
       </a>
     </div>
   </header>
 
   <main>
+    <!-- IMPACTO PRINCIPAL -->
     <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-label">Atendimento em Curitiba e Região</div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">Estética Automotiva em Curitiba</div>
 
-        <h1>
-          Estética que<br />
-          <span>valoriza seu carro.</span>
-        </h1>
+          <h1>
+            Seu carro.<br />
+            <span>Em outro nível.</span>
+          </h1>
 
-        <p>
-          Cuidado profissional para deixar seu veículo impecável, protegido e com
-          acabamento de verdade em cada detalhe.
-        </p>
+          <p>
+            Cuidado técnico, acabamento impecável e proteção para quem exige
+            o melhor do seu veículo.
+          </p>
 
-        <div class="hero-actions">
-          <a
-            href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20MV%20Estética%20Automotiva."
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Agendar atendimento →
-          </a>
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/5541995713588?text=Olá!%20Quero%20agendar%20um%20horário%20na%20MV%20Estética%20Automotiva."
+              class="btn btn-dark"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chamar no WhatsApp →
+            </a>
 
-          <a href="#servicos" class="btn btn-outline">
-            Ver serviços
-          </a>
+            <a href="#servicos" class="btn btn-outline">
+              Ver serviços
+            </a>
+          </div>
+
+          <div class="hero-info">
+            <div>
+              <strong>4,9 ★</strong>
+              <span>Nota no Google</span>
+            </div>
+
+            <div>
+              <strong>69+</strong>
+              <span>Avaliações de clientes</span>
+            </div>
+
+            <div>
+              <strong>Curitiba</strong>
+              <span>Água Verde e região</span>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="hero-proof">
-        <span class="hero-stars">★★★★★</span>
-        <span><strong>4,9 no Google</strong> com base em 69 avaliações de clientes.</span>
       </div>
     </section>
 
+    <!-- SERVIÇOS -->
     <section class="section services" id="servicos">
       <div class="container">
-        <div class="section-top">
+        <div class="services-top">
           <div>
-            <div class="eyebrow">O que a MV faz</div>
+            <div class="eyebrow">O que fazemos</div>
             <h2 class="section-title">
-              Nossos <span>serviços.</span>
+              Cuidado completo.<br />
+              <span>Resultado de verdade.</span>
             </h2>
           </div>
 
-          <p class="section-text">
-            Soluções para limpeza, renovação, proteção e valorização do seu veículo.
-            Escolha o que ele precisa e fale com a nossa equipe.
+          <p>
+            Soluções profissionais para renovar, proteger e valorizar seu
+            veículo em cada detalhe.
           </p>
         </div>
 
-        <div class="service-tabs" role="tablist" aria-label="Categorias de serviços">
-          <button class="service-tab active" data-tab="estetica" role="tab">
-            Estética Automotiva
-          </button>
-
-          <button class="service-tab" data-tab="protecao" role="tab">
-            Proteção e Pintura
-          </button>
-
-          <button class="service-tab" data-tab="produtos" role="tab" id="produtos">
-            Produtos
-          </button>
-        </div>
-
-        <div class="tab-panel services-grid active" id="estetica">
+        <div class="services-grid">
           <article class="service-card">
-            <span class="service-number">01</span>
-            <div class="service-icon">✦</div>
+            <span class="service-number">01 — LAVAGEM</span>
             <h3>Lavagem Técnica</h3>
             <p>
-              Limpeza detalhada interna e externa com cuidado para cada superfície
-              do seu veículo.
+              Limpeza detalhada interna e externa, com cuidado para cada
+              material e acabamento.
             </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Lavagem%20Técnica."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
           <article class="service-card">
-            <span class="service-number">02</span>
-            <div class="service-icon">◈</div>
-            <h3>Higienização</h3>
-            <p>
-              Limpeza profunda para bancos, tapetes, painel e interior, ajudando a
-              eliminar odores e impurezas.
-            </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Higienização%20Automotiva."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <div class="service-icon">◉</div>
-            <h3>Revitalização</h3>
-            <p>
-              Tratamentos para recuperar o aspecto de plásticos, acabamentos e
-              detalhes que perderam a aparência original.
-            </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Revitalização%20Automotiva."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <div class="service-icon">⚙</div>
-            <h3>Detalhamento</h3>
-            <p>
-              Serviço completo para quem procura atenção máxima aos detalhes e uma
-              entrega diferenciada.
-            </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Detalhamento%20Automotivo."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
-          </article>
-        </div>
-
-        <div class="tab-panel services-grid" id="protecao">
-          <article class="service-card">
-            <span class="service-number">01</span>
-            <div class="service-icon">◌</div>
+            <span class="service-number">02 — PINTURA</span>
             <h3>Polimento Técnico</h3>
             <p>
-              Correção de imperfeições e realce da pintura para recuperar brilho,
-              profundidade e acabamento.
+              Correção de imperfeições, mais brilho e profundidade para a
+              pintura.
             </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Polimento%20Técnico."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
           <article class="service-card">
-            <span class="service-number">02</span>
-            <div class="service-icon">◇</div>
+            <span class="service-number">03 — PROTEÇÃO</span>
             <h3>Vitrificação</h3>
             <p>
-              Proteção para a pintura com brilho intenso e mais facilidade na
-              manutenção do veículo.
+              Proteção duradoura, brilho intenso e facilidade para manter o
+              carro limpo.
             </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Vitrificação."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
           <article class="service-card">
-            <span class="service-number">03</span>
-            <div class="service-icon">⬡</div>
-            <h3>PPF</h3>
+            <span class="service-number">04 — PPF</span>
+            <h3>Película de Proteção</h3>
             <p>
-              Película de proteção para áreas estratégicas, ajudando a preservar a
-              pintura contra riscos e impactos do dia a dia.
+              Proteção invisível para preservar a pintura contra riscos e
+              agressões do dia a dia.
             </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20PPF."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
           </article>
 
           <article class="service-card">
-            <span class="service-number">04</span>
-            <div class="service-icon">▣</div>
-            <h3>Proteção Personalizada</h3>
+            <span class="service-number">05 — INTERIOR</span>
+            <h3>Higienização Interna</h3>
             <p>
-              Avaliamos o estado do seu veículo para indicar o melhor cuidado para
-              a sua necessidade.
+              Limpeza profissional de bancos, tapetes, painéis e acabamento
+              interno.
             </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20uma%20avaliação%20para%20proteção%20do%20meu%20veículo."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar orçamento →
-            </a>
-          </article>
-        </div>
-
-        <div class="tab-panel services-grid" id="produtos">
-          <article class="service-card">
-            <span class="service-number">01</span>
-            <div class="service-icon">◒</div>
-            <h3>Shampoos e Limpeza</h3>
-            <p>
-              Produtos selecionados para a limpeza segura e manutenção do seu
-              veículo em casa.
-            </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20conhecer%20os%20produtos%20de%20limpeza%20automotiva."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Consultar produtos →
-            </a>
           </article>
 
           <article class="service-card">
-            <span class="service-number">02</span>
-            <div class="service-icon">✧</div>
-            <h3>Ceras e Proteção</h3>
+            <span class="service-number">06 — DETALHES</span>
+            <h3>Serviços Personalizados</h3>
             <p>
-              Opções para manter brilho, proteção e acabamento entre os
-              atendimentos.
+              Avaliamos seu veículo e indicamos o melhor processo para a sua
+              necessidade.
             </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20conhecer%20as%20ceras%20e%20produtos%20de%20proteção."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Consultar produtos →
-            </a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <div class="service-icon">▤</div>
-            <h3>Acessórios</h3>
-            <p>
-              Itens para facilitar o cuidado diário e deixar seu carro sempre bem
-              apresentado.
-            </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20conhecer%20os%20acessórios%20automotivos%20disponíveis."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Consultar produtos →
-            </a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <div class="service-icon">＋</div>
-            <h3>Monte seu Kit</h3>
-            <p>
-              Fale com a equipe e receba uma indicação de produtos conforme seu
-              tipo de veículo e rotina.
-            </p>
-            <a
-              class="service-link"
-              href="https://wa.me/5541995713588?text=Olá!%20Gostaria%20de%20montar%20um%20kit%20de%20produtos%20para%20meu%20veículo."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Falar com a equipe →
-            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section reviews" id="avaliacoes">
+    <!-- FOTOS REAIS -->
+    <section class="section results" id="resultados">
       <div class="container">
-        <div class="eyebrow">Avaliações</div>
-
+        <div class="eyebrow">Estrutura e resultados</div>
         <h2 class="section-title">
-          O que nossos <span>clientes dizem.</span>
+          Aqui, cada detalhe<br />
+          <span>faz diferença.</span>
         </h2>
 
-        <p class="section-text">
-          A confiança de quem já passou pela MV Estética Automotiva e aprovou o
-          cuidado entregue em cada veículo.
-        </p>
-
-        <div class="reviews-layout">
-          <div class="google-score">
-            <small>Avaliação no Google</small>
-            <div class="score-number">4,9</div>
-            <div class="score-stars">★★★★★</div>
-            <p>Com base em <strong>69 avaliações</strong></p>
-
-            <div class="google-name">
-              <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
-            </div>
+        <div class="results-grid">
+          <div class="result-main">
+            <img
+              src="imagens/mv-fachada-2.jpg"
+              alt="Estrutura da MV Estética Automotiva em Curitiba"
+            />
           </div>
 
-          <div class="reviews-cards">
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-person">
-                  <span class="review-avatar">CL</span>
-                  <span>
-                    <strong>Cliente Google</strong>
-                    <small>Avaliação verificada</small>
-                  </span>
-                </div>
-                <span class="review-google">G</span>
-              </div>
+          <div class="result-side">
+            <div class="result-small">
+              <img
+                src="imagens/mv-ppf.jpg"
+                alt="Aplicação de PPF na MV Estética Automotiva"
+              />
+            </div>
 
-              <div class="review-stars">★★★★★</div>
+            <div class="result-small">
+              <img
+                src="imagens/mv-carros.jpg"
+                alt="Veículos atendidos pela MV Estética Automotiva"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- GOOGLE -->
+    <section class="section reviews" id="avaliacoes">
+      <div class="container">
+        <div class="eyebrow">Avaliações no Google</div>
+
+        <h2 class="section-title">
+          Quem confia na MV,<br />
+          <span>recomenda.</span>
+        </h2>
+
+        <div class="google-summary">
+          <div class="rating-box">
+            <div class="google-label">Google</div>
+            <div class="rating-number">4,9</div>
+            <div class="stars">★★★★★</div>
+            <p>Com base em <strong>69 avaliações</strong></p>
+          </div>
+
+          <div class="reviews-list">
+            <article class="review">
               <p>
-                Atendimento excelente, muito cuidado em cada detalhe e resultado
-                final acima do esperado. Recomendo muito.
+                “Atendimento excelente, muito capricho e cuidado em todos os
+                detalhes do veículo.”
               </p>
+              <strong>— Cliente MV · Avaliação no Google</strong>
             </article>
 
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-person">
-                  <span class="review-avatar">MV</span>
-                  <span>
-                    <strong>Cliente Google</strong>
-                    <small>Avaliação verificada</small>
-                  </span>
-                </div>
-                <span class="review-google">G</span>
-              </div>
-
-              <div class="review-stars">★★★★★</div>
-
+            <article class="review">
               <p>
-                Meu carro ficou impecável. Equipe atenciosa, serviço bem feito e
-                entrega dentro do combinado.
+                “Serviço impecável. O carro ficou muito acima do esperado.
+                Recomendo sem dúvida.”
               </p>
+              <strong>— Cliente MV · Avaliação no Google</strong>
             </article>
 
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-person">
-                  <span class="review-avatar">AR</span>
-                  <span>
-                    <strong>Cliente Google</strong>
-                    <small>Avaliação verificada</small>
-                  </span>
-                </div>
-                <span class="review-google">G</span>
-              </div>
-
-              <div class="review-stars">★★★★★</div>
-
+            <article class="review">
               <p>
-                Profissionais muito caprichosos. Dá para perceber a qualidade no
-                acabamento e no cuidado com o veículo.
+                “Equipe atenciosa, profissionais cuidadosos e resultado final
+                excelente.”
               </p>
+              <strong>— Cliente MV · Avaliação no Google</strong>
             </article>
           </div>
         </div>
 
-        <div class="review-action">
+        <div class="google-button">
           <a
-            href="https://www.google.com/search?q=MV+Est%C3%A9tica+Automotiva+Curitiba+avalia%C3%A7%C3%B5es"
+            class="btn btn-yellow"
+            href="https://www.google.com/maps/search/?api=1&query=MV%20Est%C3%A9tica%20Automotiva%20Rua%20Amazonas%20651%20Curitiba"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn"
           >
             Ver avaliações no Google →
           </a>
@@ -1379,134 +1041,101 @@
       </div>
     </section>
 
-    <section class="benefits">
-      <div class="container benefits-grid">
-        <article class="benefit">
-          <strong>Cuidado Real</strong>
-          <p>Seu veículo recebe atenção em cada etapa do serviço.</p>
-        </article>
+    <!-- CONTATO E MAPA -->
+    <section class="section contact" id="contato">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">Fale com a MV</div>
 
-        <article class="benefit">
-          <strong>Atendimento Direto</strong>
-          <p>Fale com a equipe pelo WhatsApp e tire suas dúvidas.</p>
-        </article>
+          <h2 class="section-title">
+            Seu veículo merece<br />
+            <span>esse cuidado.</span>
+          </h2>
 
-        <article class="benefit">
-          <strong>Curitiba e Região</strong>
-          <p>Atendimento para clientes de Curitiba e cidades próximas.</p>
-        </article>
+          <p class="contact-text">
+            Solicite seu orçamento pelo WhatsApp ou venha conhecer nossa
+            estrutura em Curitiba.
+          </p>
 
-        <article class="benefit">
-          <strong>Produtos Selecionados</strong>
-          <p>Produtos e processos adequados para cada necessidade.</p>
-        </article>
+          <div class="contact-list">
+            <a
+              class="contact-item"
+              href="https://wa.me/5541995713588?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-icon">◉</span>
+              <span><strong>WhatsApp:</strong> (41) 99571-3588</span>
+            </a>
+
+            <a
+              class="contact-item"
+              href="https://www.instagram.com/mvesteticauto/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-icon">◎</span>
+              <span><strong>Instagram:</strong> @mvesteticauto</span>
+            </a>
+
+            <a
+              class="contact-item"
+              href="https://www.google.com/maps/search/?api=1&query=Rua%20Amazonas%20651%20Agua%20Verde%20Curitiba%20PR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-icon">⌖</span>
+              <span><strong>Endereço:</strong> Rua Amazonas, 651 — Água Verde</span>
+            </a>
+          </div>
+
+          <div style="margin-top: 30px;">
+            <a
+              href="https://wa.me/5541995713588?text=Olá!%20Quero%20um%20orçamento%20para%20meu%20veículo."
+              class="btn btn-yellow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicitar orçamento →
+            </a>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe
+            title="Mapa MV Estética Automotiva"
+            src="https://www.google.com/maps?q=Rua%20Amazonas%20651%20Agua%20Verde%20Curitiba%20PR&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer" id="contato">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#inicio" class="logo" aria-label="MV Estética Automotiva">
-            <span class="logo-mv">MV</span>
-            <span class="logo-name">
-              Estética Automotiva
-              <small>Curitiba e Região</small>
-            </span>
-          </a>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> MV Estética Automotiva. Todos os direitos reservados.</p>
 
-          <p>
-            Estética automotiva para quem busca cuidado, proteção e resultado em
-            cada detalhe.
-          </p>
-        </div>
-
-        <div>
-          <h3>Serviços</h3>
-          <ul class="footer-links">
-            <li><a href="#servicos">Lavagem Técnica</a></li>
-            <li><a href="#servicos">Polimento Técnico</a></li>
-            <li><a href="#servicos">Vitrificação</a></li>
-            <li><a href="#servicos">Higienização</a></li>
-            <li><a href="#servicos">PPF</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Atendimento</h3>
-
-          <div class="footer-contact">
-            <div>
-              <strong>WhatsApp</strong>
-              <a
-                href="https://wa.me/5541995713588"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                (41) 99571-3588
-              </a>
-            </div>
-
-            <div>
-              <strong>Endereço</strong>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Rua+Amazonas,+651,+Curitiba+-+PR"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Rua Amazonas, 651<br />
-                Curitiba - PR
-              </a>
-            </div>
-
-            <div>
-              <strong>Instagram</strong>
-              <a
-                href="https://www.instagram.com/mvesteticauto/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @mvesteticauto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3>Onde estamos</h3>
-
-          <div class="footer-map">
-            <iframe
-              title="Mapa da MV Estética Automotiva"
-              src="https://www.google.com/maps?q=Rua%20Amazonas%2C%20651%2C%20Curitiba%20-%20PR&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© <span id="year"></span> MV Estética Automotiva. Todos os direitos reservados.</p>
-
+      <p>
+        Curitiba, PR ·
         <a
-          href="https://www.instagram.com/salesmatesbr/"
+          href="https://www.instagram.com/mvesteticauto/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Desenvolvido por Sales Mates
+          @mvesteticauto
         </a>
-      </div>
+      </p>
     </div>
   </footer>
 
   <a
-    class="whatsapp-float"
+    class="whatsapp"
     href="https://wa.me/5541995713588?text=Olá!%20Vim%20pelo%20site%20da%20MV%20Estética%20Automotiva%20e%20gostaria%20de%20um%20orçamento."
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Falar pelo WhatsApp"
+    aria-label="Falar no WhatsApp"
     title="Falar no WhatsApp"
   >
     ◉
@@ -1533,21 +1162,6 @@
       link.addEventListener("click", () => {
         menu.classList.remove("active");
         menuToggle.textContent = "☰";
-      });
-    });
-
-    const tabs = document.querySelectorAll(".service-tab");
-    const panels = document.querySelectorAll(".tab-panel");
-
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const target = tab.dataset.tab;
-
-        tabs.forEach((item) => item.classList.remove("active"));
-        panels.forEach((panel) => panel.classList.remove("active"));
-
-        tab.classList.add("active");
-        document.getElementById(target).classList.add("active");
       });
     });
   </script>
