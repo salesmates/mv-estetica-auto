@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MV Estética Automotiva | Proteção e Estética Premium</title>
+
   <meta
     name="description"
-    content="MV Estética Automotiva: estética, proteção e cuidado premium para o seu veículo."
+    content="MV Estética Automotiva: estética, proteção e cuidado premium para o seu veículo em Curitiba."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
@@ -70,6 +72,7 @@
       z-index: 10;
       width: 100%;
       border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(0, 0, 0, 0.22);
     }
 
     .nav {
@@ -81,8 +84,10 @@
     }
 
     .brand-logo {
-      width: 112px;
+      width: 130px;
       height: auto;
+      filter: invert(1);
+      mix-blend-mode: screen;
     }
 
     .menu {
@@ -136,7 +141,7 @@
       background:
         linear-gradient(90deg, rgba(0, 0, 0, 0.91) 0%, rgba(0, 0, 0, 0.63) 45%, rgba(0, 0, 0, 0.13) 100%),
         linear-gradient(0deg, rgba(0, 0, 0, 0.76) 0%, transparent 55%),
-        url("assets/garagem-01.jpg") center center / cover no-repeat;
+        url("garagem-01.jpg") center center / cover no-repeat;
     }
 
     .hero-content {
@@ -442,6 +447,36 @@
       text-transform: uppercase;
     }
 
+    .contact-list a:hover {
+      color: var(--gold-light);
+    }
+
+    /* BOTÃO FLUTUANTE */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 15px 20px;
+      background: var(--gold);
+      color: #111111;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      background: var(--white);
+      transform: translateY(-3px);
+    }
+
     /* FOOTER */
 
     footer {
@@ -458,8 +493,10 @@
     }
 
     .footer-logo {
-      width: 95px;
+      width: 110px;
       height: auto;
+      filter: invert(1);
+      mix-blend-mode: screen;
     }
 
     .footer-content p {
@@ -501,7 +538,7 @@
       }
 
       .brand-logo {
-        width: 90px;
+        width: 105px;
       }
 
       .nav-button {
@@ -512,6 +549,7 @@
       .hero {
         min-height: 700px;
         padding-top: 130px;
+        background-position: 62% center;
       }
 
       section,
@@ -541,6 +579,13 @@
       .footer-content p {
         text-align: left;
       }
+
+      .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        padding: 14px 16px;
+        font-size: 0.65rem;
+      }
     }
   </style>
 </head>
@@ -566,7 +611,7 @@
 
       <a
         class="nav-button"
-        href="https://wa.me/5541999999999"
+        href="https://wa.me/554195713588?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento."
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -596,7 +641,7 @@
           <div class="hero-actions">
             <a
               class="button"
-              href="https://wa.me/5541999999999"
+              href="https://wa.me/554195713588?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -737,7 +782,7 @@
         <div class="gallery-grid">
           <div class="gallery-item">
             <img
-              src="assets/garagem-01.jpg"
+              src="garagem-01.jpg"
               alt="Carro no espaço da MV Estética Automotiva"
             >
           </div>
@@ -780,7 +825,7 @@
 
           <a
             class="button"
-            href="https://wa.me/5541999999999"
+            href="https://wa.me/554195713588?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -810,27 +855,28 @@
               <li>
                 <strong>WhatsApp</strong>
                 <a
-                  href="https://wa.me/5541999999999"
+                  href="https://wa.me/554195713588?text=Olá!%20Vim%20pelo%20site%20da%20MV%20Estética%20Automotiva."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Clique aqui para conversar
+                  +55 (41) 9571-3588
                 </a>
               </li>
 
               <li>
                 <strong>Instagram</strong>
                 <a
-                  href="https://instagram.com/"
+                  href="https://www.instagram.com/mvesteticauto/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  @mvesteticaautomotiva
+                  @mvesteticauto
                 </a>
               </li>
 
               <li>
                 <strong>Localização</strong>
+                Rua Amazonas, 651, Água Verde<br>
                 Curitiba - PR
               </li>
             </ul>
@@ -861,6 +907,16 @@
     </section>
 
   </main>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/554195713588?text=Olá!%20Gostaria%20de%20um%20orçamento."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a MV Estética Automotiva pelo WhatsApp"
+  >
+    WhatsApp ↗
+  </a>
 
   <footer>
     <div class="container footer-content">
